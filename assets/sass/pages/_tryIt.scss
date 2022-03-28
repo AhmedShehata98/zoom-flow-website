@@ -1,0 +1,85 @@
+.tryIt{
+    position: relative;
+    min-height: 100vh;
+    background-color: $primary-clr;
+    border: 2px solid;
+    >.container-fluid:first-child{
+        >.tryIt-header{
+            @include flexBox(row, center);
+            height: 70px;
+            margin: 2.5rem auto;
+
+            >h3.sectionTitle{
+                position: relative;
+                z-index: 5;
+                color: #f6f6f8;
+                margin-bottom: 0;
+                padding: 0.5rem 0;
+
+                &:after{
+                    content: '';
+                    position: absolute;
+                    left: calc(100% + 18px);
+                    top: 0;
+                    width: 4px;
+                    height: 100%;
+                    background-color: $therd-clr;
+                }
+                
+                &:before{
+                    content: '';
+                    position: absolute;
+                    z-index: -1;
+                    left: 114%;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width:  12px;
+                    height: 12px;
+                    background-color: $therd-clr;
+                    // border-radius: 50%;
+                    transition: width 0.3s ease-out 0.5s ,
+                        height 0.3s ease-out 0.5s ,
+                        left 0.3s ease-out ;
+                }
+                
+            }
+
+            &:hover .sectionTitle::before {
+                left: -10px;
+                width: 120%;
+                height: 100%;
+                border-radius: 0%;
+            }
+        }
+    }
+    >.container-fluid:last-child{
+        min-height: inherit;
+        background-color: $primary-clr;
+        padding-top: 4rem;
+        padding-bottom: 7rem;
+        
+        >.gallery{
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(350px,400px));
+            gap: 15px;
+            align-items: center;
+            justify-content: center;
+            .box{
+                border : 1px solid $secondary-clr;
+                border-radius: 15px 0 15px 0;
+                overflow: hidden;
+                transition: transform 0.3s ease-out ;
+
+                &:hover{
+                    transform: translateY(-10px);
+                }
+
+                >img{
+                    max-width: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,48 @@
+.howTo{
+    min-height: 100vh;
+    background-color: $primary-clr;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+    @include sectionTitle;
+    >.container{
+        @include flexBox(column , center);
+        gap: 20px;
+        min-height: inherit;
+
+        .exp{
+            position: relative;
+            width: 100%;
+            height: fit-content;
+            overflow: hidden;
+
+            .explainText{
+                color: #f6f6f8;
+                text-transform: capitalize;
+                margin-bottom: 2.5rem;
+                width: fit-content;
+                >code{
+                    text-transform: lowercase;
+                }
+            }
+
+            .explainImg{
+                width: 50%;
+                height: 100%;
+
+                >img{
+                    max-width: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                }
+            }
+        }
+
+        .exp:nth-child(even){
+            >:first-child ,
+            >:last-child{
+                margin-left: auto;               
+            }
+        }
+    }
+}

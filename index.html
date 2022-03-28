@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/images/zoom.png" type="image/x-icon">
+    <title>zoom Flow</title>
+
+    <link rel="stylesheet" href="./assets/css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/zoomFlow.min.css">
+</head>
+<body>
+    <!-- <div class="baseOverlay">
+        <div class="backdropOverlay">
+            <div class="imageContainer">
+                <div class="mainImageBox">
+                    <img class="previewImg" src="./assets/images/pexels-rok-romih-3312671.jpg" alt="">
+                </div>
+            </div>
+            <div class="optionsBox">
+                <div class="closeBTN">
+                    <span class="closeIcon">X</span>
+                </div>
+                <div class="zoomControlBTNS">
+                    <span class="zoomIN">+</span>
+                    <span class="zoomOUT">-</span>
+                </div>
+            </div>
+        </div>
+    </div>  -->
+    <header class="appHeader">
+        <div class="container">
+            <div class="logo">
+                <img src="./assets/images/zoom.png" alt="siteLogo.png">
+                <h3 class="logoText">
+                    zoom flow
+                </h3>
+            </div>
+            <nav class="navgationBar">
+                <a class="active" href="#home"> home</a>
+                <a href="#tryIt"> try it</a>
+                <a href="#howTo"> how to</a>
+                <a href="#"> about Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="home" id="home">
+        <section class="container">
+            <article class="welcomePhoto">
+                <img src="./assets/images/zoomFlow.png" alt="zoomflow.png">
+            </article>
+            <article class="welcomeText">
+                <h4 class="welcomeHeading mb-3">
+                    Hello Dir Customer
+                    <br>
+                    and this is a
+                    <span>Zoom flow </span>library
+                </h4>
+                <p class="text-muted mb-5">
+                    It is a library used to zoom in / zoom out and scroll your enlarged image, and it is characterized by lightness and ease of use as it is a small library                    
+                </p>
+                <a class="lookOver mb-5" href="https://github.com/AhmedShehata98/zoom-flow-library.git" target="_blacnk">
+                    <button type="button" >
+                        Look over
+                    </button>
+                </a>
+            </article>
+            </div> -->
+        </section>
+    </main>
+    <main class="tryIt" id="tryIt">
+        <section class="container-fluid">
+            <header class="tryIt-header">
+                <h3 class="sectionTitle">Try it</h3>
+            </header>
+        </section>
+        <section class="container-fluid">
+            <div class="gallery" id="images-gallery">
+                <div class="box">
+                    <img src="./assets/images/gallery/01.jpg" alt="imageExmple-1">
+                </div>
+                <div class="box">
+                    <img src="./assets/images/gallery/02.jpg" alt="imageExmple-2">
+                </div>
+                <div class="box">
+                    <img src="./assets/images/gallery/03.jpg" alt="imageExmple-3">
+                </div>
+                <div class="box">
+                    <img src="./assets/images/gallery/04.jpg" alt="imageExmple-4">
+                </div>
+                <div class="box">
+                    <img src="./assets/images/gallery/05.jpg" alt="imageExmple-5">
+                </div>
+                <div class="box">
+                    <img src="./assets/images/gallery/06.jpg" alt="imageExmple-6">
+                </div>
+                <div class="box">
+                    <img src="./assets/images/gallery/07.jpg" alt="imageExmple-7">
+                </div>
+                <div class="box">
+                    <img src="./assets/images/gallery/08.jpg" alt="imageExmple-8">
+                </div>
+                <div class="box">
+                    <img src="./assets/images/gallery/09.jpg" alt="imageExmple-9">
+                </div>
+            </div>
+        </section>
+    </main>
+    <main class="howTo" id="howTo">
+        <section class="container-fluid">
+            <header class="tryIt-header">
+                <h3 class="sectionTitle">how to</h3>
+            </header>
+        </section>
+        <div class="container">
+            <div class="exp mb-3">
+                <p class="explainText">
+                    1 - start to declare library folders in your index.html file 
+                    <br>
+                    with importand thing is the <code> type="module"</code>
+                </p>
+                <div class="explainImg">
+                    <img src="./assets/images/howTo/code.png" alt="code.png">
+                </div>
+            </div>
+            <div class="exp mb-3">
+                <p class="explainText">
+                    2 - import the library from your main js script file and write <code>zoomify</code><br>
+                    as library class name and write <code>from ' file path'</code> library file location
+                    <br>
+                    and create new object from libray
+                </p>
+                <div class="explainImg">
+                    <img src="./assets/images/howTo/code-2.png" alt="code2.png">
+                </div>
+            </div>
+            <div class="exp mb-3">
+                <p class="explainText">
+                    3 - catch your element you want to zoom in/ out and store it in <code>var</code>
+                    or <code>let</code> as you like
+                    <br>
+                    and start adding event on this element by <code>addEventListener('click',function (e)<br>{<br>zoomFlow.ZoomOverlay(e.target.src)<br> }</code>
+                </p>
+                <div class="explainImg">
+                    <img src="./assets/images/howTo/code-3.png" alt="code3.png">
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    
+    <script type="module" src="./assets/js/ZoomIfy.js"></script>
+    <script type="module" src="./assets/js/main.js"></script>
+</body>
+</html>

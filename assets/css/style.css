@@ -1,0 +1,159 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+.container{
+    min-height: 120vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: indianred;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+.gallery{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 25px;
+
+}
+
+.gallery .box{
+    flex-basis: 30%;
+    border: 2px solid whitesmoke;
+    
+
+}
+
+.gallery .box img{
+    max-width: 100%;
+    overflow: hidden;
+}
+/* 
+
+.mainOverlay{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #242424e3;
+    backdrop-filter: blur(5px);
+}
+
+.mainOverlay .overlayContainer{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: auto 1.45rem;
+
+}
+
+.mainOverlay .overlayContainer .closeBtnBox {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    height: 15vh;
+}
+.mainOverlay .overlayContainer .closeBtnBox >span{
+    border: 1px solid #fff;
+    cursor: pointer;
+    padding: 0.35rem;
+    width: 30px;
+    height: 31px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainOverlay .overlayContainer .closeBtnBox >span >:first-child{
+    color: #f00;
+    width: 20px;
+    height: 20px;
+}
+
+.mainOverlay .overlayContainer .imgBOX{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60%;
+    overflow: hidden;
+    border-radius: 0.75rem;
+    
+}
+
+
+.mainOverlay .overlayContainer .imgBOX img.previewImg{
+    max-width: 100%;
+    object-fit: cover;
+    transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mainOverlay .overlayContainer .optionsContainer{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 5;
+    height: 20vh;
+    width: 100%;
+    
+}
+
+.mainOverlay .overlayContainer .optionsContainer >:first-child{
+    margin-right: auto;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.mainOverlay .overlayContainer .optionsContainer .optionsBox{
+    position: relative;
+    z-index: 5;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
+
+.mainOverlay .overlayContainer .optionsContainer .optionsBox >:first-child{
+    color: #fff;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    align-self: flex-start;
+}
+
+.mainOverlay .overlayContainer .optionsContainer .optionsBox .zoomOption{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    
+}
+
+.mainOverlay .overlayContainer .optionsContainer .optionsBox .zoomOption >input{
+    flex-grow: 1;
+}
+
+.mainOverlay .overlayContainer .optionsContainer .optionsBox .zoomOption >:first-child,
+.mainOverlay .overlayContainer .optionsContainer .optionsBox .zoomOption >:last-child{
+    color: #fff;
+    font-size: 1rem;
+} */

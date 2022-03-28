@@ -1,0 +1,62 @@
+.home{
+    @include flexBox(column , center);
+    min-height: 100vh;
+    background-color: $primary-clr;
+    
+    
+    >.container{
+        @include flexBox(row , center);
+        gap: 15px;
+        height: inherit;
+        margin-top: 60px;
+
+        @include endPoint(lg){
+            flex-direction: column;
+        }
+
+        >.welcomePhoto{
+            flex-basis: 50%;
+            
+            >img{
+                width: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+        
+        .welcomeText{
+            @include flexBox(column , center);
+            align-items: flex-start;
+            flex-basis: calc(50% - 15px);
+
+            .welcomeHeading{
+                color: #f6f6f8;
+                text-transform: capitalize;
+                font-size: calc(1.1rem + 1vw);
+                font-weight: bold !important;
+
+                >span{
+                    color: $therd-clr;
+                }
+            }
+
+            .lookOver{
+                text-decoration: none;
+
+                >button{
+                    color: #fff;
+                    padding: 0.5rem 1.5rem;
+                    border: unset;
+                    font-size: 1.2rem;
+                    background-color: $secondary-clr;
+                    border-radius: 1rem 0 1rem 0;
+
+                    &:hover{
+                        background-color: transparent;
+                        border: 1px solid $secondary-clr;
+                    }
+                }
+            }
+        }
+    }
+}
