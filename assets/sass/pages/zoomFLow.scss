@@ -126,3 +126,11 @@
     }
 
 }
+.prevent_Scoll{
+    height: 100vh;
+    overflow-y: hidden;
+
+    @include endPoint(small){
+        position: fixed;
+    }
+}

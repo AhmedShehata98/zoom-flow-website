@@ -9,6 +9,8 @@
     
     >.container{
         @include flexBox(row , space-between);
+        position: relative;
+        z-index: 1040;
         width: 100%;
         height: inherit;
         
@@ -30,9 +32,54 @@
 
         }
 
+        .toggler{
+            @include flexBox(row , center);
+            width: 45px;
+            height: 45px;
+            background-color: $therd-clr;
+            cursor: pointer;
+            text-align: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease-out ,background-color 0.3s ease-out;
+
+            &:hover{
+                background-color: darken($therd-clr, 20%);
+            }
+
+            @include endPoint(sm){
+                opacity: 1;
+                pointer-events: all;
+            }
+
+            >:first-child{
+                margin: auto;
+                font-size: 2.5rem;
+                color: #f6f6f8
+            }
+        }
+        
         .navgationBar{
             @include flexBox(row , center);
             gap: 5px;
+
+            @include endPoint(sm){
+                position: absolute;
+                z-index: -1;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                flex-direction: column;
+                background-color: $primary-clr;
+                gap: 15px;
+                transform: translateY(-130%);
+                transition: transform 0.3s ease-out;
+
+                &.open{
+                    transform: translateY(0%);
+                }
+            }
 
             >a{
                 padding: 0.5rem 1.2rem;
@@ -42,6 +89,13 @@
                 font-weight: 600;
                 transition: background-color 0.2s ease-in-out;
 
+                @include endPoint(sm){
+                    width: 100%;
+                    margin-left: 15px;
+                    margin-right: 15px;
+                    text-align: center;
+                }
+
                 &:hover,
                 &.active{
                     background-color: $therd-clr;
@@ -49,5 +103,13 @@
                 }
             }
         }
+    }
+}
+.prevent_Scoll{
+    height: 100vh;
+    overflow-y: hidden;
+
+    @include endPoint(small){
+        position: fixed;
     }
 }

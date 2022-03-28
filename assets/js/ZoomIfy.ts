@@ -47,7 +47,13 @@ export class Zoomify {
         image.src= imageSrcLink;
 
         /// Event to close overlay
-        closeBTN.addEventListener('click', () => baseOverlay.remove() )
+        closeBTN.addEventListener('click', () =>{
+        // prevent body scrolling
+        baseOverlay.remove()
+            if (document.body.classList.contains('prevent_Scoll')) {
+                document.body.classList.remove('prevent_Scoll');
+            }
+        })
         
         /// start Deffine zoom in & zoom out events
         zoomIN.addEventListener('click' , () => {
@@ -123,6 +129,8 @@ export class Zoomify {
 
         /// Finally append element to body
         document.body.prepend(baseOverlay);
+        // prevent body scrolling
+        document.body.classList.add('prevent_Scoll');
     }
 
 

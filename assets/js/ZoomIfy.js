@@ -42,7 +42,13 @@ var Zoomify = /** @class */ (function () {
             zoomOUT.className = 'zoomOUT';
             image.src = imageSrcLink;
             /// Event to close overlay
-            closeBTN.addEventListener('click', function () { return baseOverlay.remove(); });
+            closeBTN.addEventListener('click', function () {
+                // prevent body scrolling
+                baseOverlay.remove();
+                if (document.body.classList.contains('prevent_Scoll')) {
+                    document.body.classList.remove('prevent_Scoll');
+                }
+            });
             /// start Deffine zoom in & zoom out events
             zoomIN.addEventListener('click', function () {
                 ZOOM_IN();
@@ -112,6 +118,8 @@ var Zoomify = /** @class */ (function () {
             // end
             /// Finally append element to body
             document.body.prepend(baseOverlay);
+            // prevent body scrolling
+            document.body.classList.add('prevent_Scoll');
         };
     }
     return Zoomify;
