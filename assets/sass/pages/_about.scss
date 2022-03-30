@@ -1,0 +1,111 @@
+.about{
+    position: relative;
+    min-height: 100vh;
+    background-color: $primary-clr;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+
+
+    >.container-fluid:first-child{
+        >.tryIt-header{
+            @include flexBox(row, center);
+            height: 70px;
+            margin: 2.5rem auto;
+
+            >h3.sectionTitle{
+                position: relative;
+                z-index: 5;
+                color: #f6f6f8;
+                margin-bottom: 0;
+                padding: 0.5rem 0;
+
+                &:after{
+                    content: '';
+                    position: absolute;
+                    left: calc(100% + 18px);
+                    top: 0;
+                    width: 4px;
+                    height: 100%;
+                    background-color: $therd-clr;
+                }
+                
+                &:before{
+                    content: '';
+                    position: absolute;
+                    z-index: -1;
+                    left: 114%;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width:  12px;
+                    height: 12px;
+                    background-color: $therd-clr;
+                    // border-radius: 50%;
+                    transition: width 0.3s ease-out 0.5s ,
+                        height 0.3s ease-out 0.5s ,
+                        left 0.3s ease-out ;
+                }
+                
+            }
+
+            &:hover .sectionTitle::before {
+                left: -10px;
+                width: 120%;
+                height: 100%;
+                border-radius: 0%;
+            }
+        }
+    }
+
+    >.container{
+        min-height: inherit;
+
+        >.card{
+            background-color: darken($primary-clr, 5%);
+            box-shadow: 0 0 40px 2px rgba(#000000, 0.5);
+            border-radius: 0.75rem;
+            overflow: hidden;
+            color: #f6f6f8;
+            padding: 1rem;
+
+            img.card-img-left{
+                position: relative;
+                border-radius: 50%;
+                width:  200px;
+                height: 200px;
+                object-fit: cover;
+                object-position: center;
+                border: 8px solid $primary-clr;
+                box-shadow: 0 0 45px 2px rgba(#000000, 0.5);
+
+            }
+
+            >.row{
+                >:first-child{
+                    display: flex;
+                    flex-direction: column;
+                    .rate{
+                        @include flexBox( row , center);
+                        gap: 65px;
+                        width: 100%;
+                        height: 80px;
+                        
+                        >.star,.repos{
+                            width:  65px;
+                            height: 65px;
+                            text-align: center;
+                            padding: 0.5rem;
+                            background-color: darken($primary-clr, 5%);
+                            box-shadow: 0 0 45px 2px rgba(#000000, 0.5);
+                            border-radius: 50%;
+
+                            >:first-child{
+                                font-size: 1.5rem;
+                                color: $secondary-clr;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

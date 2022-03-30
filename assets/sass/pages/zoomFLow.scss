@@ -1,3 +1,4 @@
+@import '../abstract/mixins';
 .baseOverlay{
     position: fixed;
     z-index: 1058;
@@ -23,6 +24,11 @@
             overflow: hidden;
             background-color: #252525;
             margin-top: 5.5rem;
+
+            @include endPoint(sm){
+                width: calc(100% - 20px);
+                height: 50%;
+            }
             
             .mainImageBox{
                 position: absolute;

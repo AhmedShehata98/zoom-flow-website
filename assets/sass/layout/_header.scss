@@ -6,6 +6,8 @@
     width: 100%;
     height: 60px;
     background-color: $secondary-clr;
+    box-shadow: 0 20px 45px 2px rgba(darken($primary-clr , 5%), 0.5);
+
     
     >.container{
         @include flexBox(row , space-between);

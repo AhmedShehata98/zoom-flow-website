@@ -32,6 +32,13 @@
   margin-top: 5.5rem;
 }
 
+@media (max-width: 768px) {
+  .baseOverlay .backdropOverlay .imageContainer {
+    width: calc(100% - 20px);
+    height: 50%;
+  }
+}
+
 .baseOverlay .backdropOverlay .imageContainer .mainImageBox {
   position: absolute;
   left: 50%;
@@ -164,4 +171,9 @@
 .baseOverlay .backdropOverlay .optionsBox .zoomControlBTNS .zoomIN.disabled, .baseOverlay .backdropOverlay .optionsBox .zoomControlBTNS .zoomOUT.disabled {
   opacity: 0.3;
   cursor: no-drop;
+}
+
+.prevent_Scoll {
+  height: 100vh;
+  overflow-y: hidden;
 }
